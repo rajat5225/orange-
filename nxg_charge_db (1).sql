@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Generation Time: Nov 08, 2019 at 07:40 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Host: localhost:3306
+-- Generation Time: Dec 11, 2019 at 08:55 PM
+-- Server version: 5.7.28-0ubuntu0.18.04.4
+-- PHP Version: 7.3.11-1+ubuntu18.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `d_vltaxi`
+-- Database: `nxg_charge_db`
 --
 
 -- --------------------------------------------------------
@@ -477,7 +475,7 @@ INSERT INTO `bus_rule_ref` (`id`, `rule_name`, `rule_value`, `comment`, `sts_cd`
 (36, 'fcm_api_key', 'AAAA3nIiU8Q:APA91bHUw4z45jh5d6gmWcJId8pwP9p5uNrCbrtIsTNnY0RICasA2ogHocGkvKeJ_JfXmYOR0vYFuTfNLChCJqeev2gKrX8x5BCrcGrSoEZhtBr2JRadbECYhHfZjUJ8pI0IOY2ieXtY', NULL, 'AC', '0000-00-00 00:00:00', '2018-11-20 05:19:55'),
 (37, 'sms_key', '', NULL, 'AC', '0000-00-00 00:00:00', '2018-11-20 05:20:38'),
 (38, 'minimum_wallet_balance', '200', NULL, 'AC', '0000-00-00 00:00:00', '2018-11-27 07:41:38'),
-(39, 'refer_share_message', 'Register on NXG Charge with refer_code and earn Rs. refer_amount. Download on Android android_link ios_link', NULL, 'AC', '0000-00-00 00:00:00', '2018-11-20 05:21:12'),
+(39, 'refer_share_message', 'Register on VL Taxi with refer_code and earn Rs. refer_amount. Download on Android android_link ios_link', NULL, 'AC', '0000-00-00 00:00:00', '2018-11-20 05:21:12'),
 (40, 'twitter_social_link', '#!', NULL, 'AC', '0000-00-00 00:00:00', '2018-11-27 07:41:38'),
 (41, 'facebook_social_link', '#!', NULL, 'AC', '0000-00-00 00:00:00', '2018-11-27 07:41:38'),
 (42, 'linkedin_social_link', '#!', NULL, 'AC', '0000-00-00 00:00:00', '2018-11-27 07:41:38'),
@@ -53862,7 +53860,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `mobile_number`, `password`, `remember_token`, `forgot_key`, `profile_picture`, `country`, `state`, `city`, `registration_number`, `number_plate`, `vehicle_manufacturer`, `vehicle_model`, `vehicle_type_id`, `vehicle_color`, `device_id`, `device_token`, `device_type`, `latitude`, `longitude`, `payment_method`, `wallet_amount`, `referral_code`, `cancellation_charge`, `is_verified`, `is_visible`, `identity_verification`, `vehicle_verification`, `document_verification`, `share_ride_count`, `user_status`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@vlcare.com', '9595959595', '$2y$10$OOd908y1hVyuGhNnGYx4quXjXYV9/RQ1gOXZVQZlyleTXxkFlpyUO', 'MfqLX0cyICKbmRVLIdbgcPrI2gBWSJJuhrvnYnYKtWoN4c8sGwJbX4FJpYLM', '', 'boy2.png', '', 'Rajasthan', 'Jaipur', '', '', '', '', 0, '', '911599200484367', 'f8t92eo5TaU:APA91bHitXkpF5R8UZQUC45ic0DYSm4zlSZ4w_Y88GgUKzVq8Bu0LDQpCCmVR7uP-L-9FIAjG_jThw9Lnmd4eDKx106zWDhOtQ0t2vMYIDv1-41wUFRJEDw07c1po-mzRLf7XxnvjWmg', 'android', '', '', 'cash', '1000.00', 'RF1234', '0.00', 1, 0, 1, 1, 1, 0, 9, 'AC', '0000-00-00 00:00:00', '2019-10-23 06:23:00'),
+(1, 'admin', 'admin@nxgcharge.com', '9595959595', '$2y$10$OOd908y1hVyuGhNnGYx4quXjXYV9/RQ1gOXZVQZlyleTXxkFlpyUO', '2appmZKZuaaijyqnyybWtQjhlPFz4xnZdjUgWmSt3pU7hJCNRcrPrwpYYfMa', '', 'boy2.png', '', 'Rajasthan', 'Jaipur', '', '', '', '', 0, '', '911599200484367', 'f8t92eo5TaU:APA91bHitXkpF5R8UZQUC45ic0DYSm4zlSZ4w_Y88GgUKzVq8Bu0LDQpCCmVR7uP-L-9FIAjG_jThw9Lnmd4eDKx106zWDhOtQ0t2vMYIDv1-41wUFRJEDw07c1po-mzRLf7XxnvjWmg', 'android', '', '', 'cash', '1000.00', 'RF1234', '0.00', 1, 0, 1, 1, 1, 0, 9, 'AC', '0000-00-00 00:00:00', '2019-12-05 17:41:58'),
 (2, 'android', 'android@gmail.com', '9638527410', '$2y$10$FWVdcE6wsUJum1Pdz8PQEOxCuCZEdtOfpSMH0oGd0.Jf916ia52Aq', '', '', '1545195492.jpg', 'India', 'Rajasthan', 'Jaipur', '', '', '', '', 0, '', '7E0049D5-5C02-4B97-989D-CFC0F8D26652', 'eo-7WkSfxm0:APA91bFQT3CXCyYlsax73DW_HLjuZ4UZVs_twUNhtHINPQUOZq6n2GxMynUD8CIFHwYQDHq1s4_DX7z99q_212ibBH8azXBQD0yRF0GZHFHNXZsHf49Up4EyKtblv8yHgLNuxLc0mL04', 'ios', '26.8763469', '75.8157762', 'cash', '0.00', 'RF2149', '0.00', 0, 0, 1, 0, 0, 0, 9, 'AC', '2018-12-19 10:28:13', '2019-01-04 07:24:10'),
 (3, 'test', 'test@gmail.com', '9638527411', '$2y$10$f7bWpwQkFsW0jryz.DBOweZFt0SgRVMPHILU1itVpdV6H0avfPklS', '', '', '1545195854.jpg', 'India', 'Rajasthan', 'Jaipur', 'jdjdj', 'hdndj', 'hdjjd', 'hdjjd', 2, 'hdjjd', '911599200687209', '', 'android', '26.87637981', '75.81575868', 'cash', '0.00', 'RF6079', '0.00', 1, 0, 1, 1, 1, 0, 9, 'AC', '2018-12-19 10:34:15', '2019-04-22 05:01:06'),
 (4, 'User', 'user@gmail.com', '9999999999', '$2y$10$tFRum6ca8TI0QDUd4Nmd.OPzaALZDfWuABpCgYsGS4pI79Z584h9m', '', '', '1545198398.jpg', 'India', 'Rajasthan', 'Jaipur', '', '', '', '', 0, '', '911599200484367', 'cStBwOyNE3k:APA91bHalYPcK5YKjtYmv4KS8RA3vK0p2oywJY2plDDWfU4re2fK2LzRz9PuwOy2DPAtBqRoXm9rU0yG4z1ZLW-05yh4K354lGxtTfR8OpwtDGiR1LIfxqTHeg7lyj5cqDJJXgJvlVxi', 'android', '', '', 'cash', '0.00', 'RF2854', '0.00', 1, 0, 0, 0, 0, 0, 9, 'AC', '2018-12-19 11:16:38', '2019-08-23 08:57:35'),
@@ -64198,205 +64196,171 @@ ALTER TABLE `wallets`
 --
 ALTER TABLE `block_reasons`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
-
 --
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
-
 --
 -- AUTO_INCREMENT for table `booking_route`
 --
 ALTER TABLE `booking_route`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
-
 --
 -- AUTO_INCREMENT for table `booking_supports`
 --
 ALTER TABLE `booking_supports`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `bus_rule_ref`
 --
 ALTER TABLE `bus_rule_ref`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
 --
 -- AUTO_INCREMENT for table `cabs`
 --
 ALTER TABLE `cabs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
 --
 -- AUTO_INCREMENT for table `cities`
 --
 ALTER TABLE `cities`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48357;
-
 --
 -- AUTO_INCREMENT for table `cms`
 --
 ALTER TABLE `cms`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `complements`
 --
 ALTER TABLE `complements`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
-
 --
 -- AUTO_INCREMENT for table `countries_old`
 --
 ALTER TABLE `countries_old`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
-
 --
 -- AUTO_INCREMENT for table `coupon_codes`
 --
 ALTER TABLE `coupon_codes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `cron_job_log`
 --
 ALTER TABLE `cron_job_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `db_template`
 --
 ALTER TABLE `db_template`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `document_types`
 --
 ALTER TABLE `document_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `faq_questions`
 --
 ALTER TABLE `faq_questions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `fav_locations`
 --
 ALTER TABLE `fav_locations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `otp`
 --
 ALTER TABLE `otp`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
-
 --
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
-
 --
 -- AUTO_INCREMENT for table `referrer_users`
 --
 ALTER TABLE `referrer_users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `share_rides`
 --
 ALTER TABLE `share_rides`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT for table `states`
 --
 ALTER TABLE `states`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4122;
-
 --
 -- AUTO_INCREMENT for table `support_subject`
 --
 ALTER TABLE `support_subject`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `trusted_contacts`
 --
 ALTER TABLE `trusted_contacts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
-
 --
 -- AUTO_INCREMENT for table `user_coupon_code`
 --
 ALTER TABLE `user_coupon_code`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `user_documents`
 --
 ALTER TABLE `user_documents`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
-
 --
 -- AUTO_INCREMENT for table `user_driver`
 --
 ALTER TABLE `user_driver`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
-
 --
 -- AUTO_INCREMENT for table `user_roles`
 --
 ALTER TABLE `user_roles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
-
 --
 -- AUTO_INCREMENT for table `vehicle_types`
 --
 ALTER TABLE `vehicle_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9483;
-
 --
 -- AUTO_INCREMENT for table `wallets`
 --
 ALTER TABLE `wallets`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- Constraints for dumped tables
 --
@@ -64499,7 +64463,6 @@ ALTER TABLE `wallets`
   ADD CONSTRAINT `wallets_ibfk_2` FOREIGN KEY (`referrer_user_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `wallets_ibfk_3` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`),
   ADD CONSTRAINT `wallets_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
